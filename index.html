@@ -6,6 +6,7 @@
 <title>QADAM — Step Different</title>
 <meta name="description" content="Qadam is Karachi's pre-loved sneaker marketplace. Every pair inspected, tagged and verified before it ships. Shop local, step different.">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="liquid-chrome.css">
 </head>
 <body>
 
@@ -24,6 +25,7 @@
 </nav>
 
 <header class="hero">
+  <div id="liquid-bg" class="liquid-chrome-container" style="width:100%;height:100%;position:absolute;top:0;left:0;z-index:0;"></div>
   <div class="wrap">
     <div class="hero-copy">
       <span class="eyebrow">Karachi · Pre-Loved · Verified</span>
@@ -181,5 +183,14 @@
 </footer>
 
 <script src="script.js"></script>
+<script type="module">
+  import { LiquidChrome } from './liquid-chrome.js';
+  new LiquidChrome(document.getElementById('liquid-bg'), {
+    baseColor: [0.043, 0.043, 0.047],
+    speed: 1,
+    amplitude: 0.6,
+    interactive: true
+  });
+</script>
 </body>
 </html>
