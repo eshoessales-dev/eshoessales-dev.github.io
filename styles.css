@@ -466,3 +466,10 @@ footer .wrap{
 }
 .form-group textarea{ resize:vertical; min-height:120px; }
 .form-note{ font-family:var(--mono); font-size:0.74rem; color:var(--slate); margin-top:8px; }
+.hero {
+  position: relative;
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
