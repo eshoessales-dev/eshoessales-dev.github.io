@@ -6,6 +6,7 @@
 <title>Shop — QADAM</title>
 <meta name="description" content="Browse Qadam's pre-loved sneaker catalogue. Every pair inspected and graded. Order directly on WhatsApp.">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="accordion-gallery.css">
 </head>
 <body>
 
@@ -39,7 +40,7 @@
       <button data-filter="women">Women</button>
       <button data-filter="unisex">Unisex</button>
     </div>
-
+<div id="qadamGallery" style="margin-bottom: 40px;"></div>
     <div class="product-grid reveal-stagger">
 
       <div class="card reveal-item" data-cat="men">
@@ -170,5 +171,70 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="accordion-gallery.js"></script>
+<script>
+  // PLACEHOLDER DATA — swap image + tag when you have real photos/prices.
+  function placeholderImg(label) {
+    const svg = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200">
+        <rect width="900" height="1200" fill="#0b0b0c"/>
+        <text x="50%" y="46%" fill="#c1440e" font-family="monospace"
+              font-size="34" text-anchor="middle" letter-spacing="4">QADAM</text>
+        <text x="50%" y="54%" fill="#f5f1ea" font-family="sans-serif"
+              font-size="22" text-anchor="middle" opacity="0.6">${label}</text>
+      </svg>`;
+    return 'data:image/svg+xml;base64,' + btoa(svg);
+  }
+
+  const qadamItems = [
+    {
+      image: placeholderImg('Photo coming soon'),
+      label: 'Air Jordan 1 High',
+      tag: 'Coming Soon',
+      alt: 'Air Jordan 1 High — photo coming soon',
+      link: 'https://wa.me/923402528708?text=Interested%20in%20Air%20Jordan%201%20High'
+    },
+    {
+      image: placeholderImg('Photo coming soon'),
+      label: 'Nike Dunk Low',
+      tag: 'Coming Soon',
+      alt: 'Nike Dunk Low — photo coming soon',
+      link: 'https://wa.me/923402528708?text=Interested%20in%20Nike%20Dunk%20Low'
+    },
+    {
+      image: placeholderImg('Photo coming soon'),
+      label: 'Yeezy Boost 350',
+      tag: 'Coming Soon',
+      alt: 'Yeezy Boost 350 — photo coming soon',
+      link: 'https://wa.me/923402528708?text=Interested%20in%20Yeezy%20Boost%20350'
+    },
+    {
+      image: placeholderImg('Photo coming soon'),
+      label: 'Nike Air Force 1',
+      tag: 'Coming Soon',
+      alt: 'Nike Air Force 1 — photo coming soon',
+      link: 'https://wa.me/923402528708?text=Interested%20in%20Nike%20Air%20Force%201'
+    },
+    {
+      image: placeholderImg('Photo coming soon'),
+      label: 'New Balance 550',
+      tag: 'Coming Soon',
+      alt: 'New Balance 550 — photo coming soon',
+      link: 'https://wa.me/923402528708?text=Interested%20in%20New%20Balance%20550'
+    }
+  ];
+
+  new AccordionGallery(document.getElementById('qadamGallery'), qadamItems, {
+    defaultIndex: 2,
+    accentColor: '#c1440e',
+    overlayColor: '#0b0b0c',
+    textColor: '#f5f1ea',
+    expandRatio: 0.52,
+    trigger: 'hover',
+    height: 460,
+    radius: 4
+  });
+</script>
 </body>
 </html>
