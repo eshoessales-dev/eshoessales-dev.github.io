@@ -1,6 +1,6 @@
 // ===== CONFIG — replace with your real details =====
-const WHATSAPP_NUMBER = "923001234567"; // <-- put your real WhatsApp number here (no + or spaces)
-const CONTACT_EMAIL   = "hello@qadampk.online"; // <-- confirm/replace with your real email
+const WHATSAPP_NUMBER = "923402528708"; // <-- put your real WhatsApp number here (no + or spaces)
+const CONTACT_EMAIL   = "eshoessales@gmail.com"; // <-- confirm/replace with your real email
 
 // ===== Mobile nav toggle =====
 document.addEventListener('DOMContentLoaded', () => {
